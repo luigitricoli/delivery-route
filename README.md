@@ -6,11 +6,11 @@ O projeto foi desenvolvido em Java7 utilizando as especificações Servelet3, JA
 
 Como base de dados optei por utilizar o SQLite3 por se tratar de um projeto conceitual, não voltando para produção, e também por ser auto contido, não necessitando configurações específicas.
 
-Escolhi o Maven com gerenciador de dependências e release.
+Escolhi o Maven como gerenciador de dependências e release.
 
 ## Design 
 
-O design que escolhi para implementar o projeto foi utilizar o modelo MVC baseado nos conceitos de DDD. A escolhe do MVC é devido à facilidade de se trabalhar com esse modelo com o framework Jersey. Utilizei DDD ao implementar o conceitos e padrões: Respository, Entity, Aggregate.
+O design que escolhi para implementar o projeto foi utilizar o modelo MVC e conceitos de DDD. A escolhe do MVC é devido à facilidade de se trabalhar com esse modelo com o framework Jersey. Utilizei DDD ao implementar o conceitos e padrões: Respository, Entity, Aggregate.
 
 Escolhi para resolver o problema proposto o [algoritmo de  Dijkstra](http://www.inf.ufsc.br/grafos/temas/custo-minimo/dijkstra.html) sem otimizações específicas para grafos mais ou menos densos ou filas priorizadas. 
 Como os valores das distâncias são positivos a limitação do algoritmo de apenas utilizar números positivos para indexar as arestas não será um problema.
@@ -31,7 +31,7 @@ Como os valores das distâncias são positivos a limitação do algoritmo de ape
 
 ### Se outros
 
-3. Coloque o arquivo ``dr_config.properties`` no ClASSPATH do servidor
+3. Coloque o arquivo ``dr_config.properties`` no CLASSPATH do servidor
 4. Altere a propriedade ``dp``, do arquivo ``dr_config.properties``, para o diretório e nome do banco de dados
 5. Execute ``mvn package``
 6. Faça deploy do artefato ``dr.war`` no servidor
@@ -41,7 +41,7 @@ Como os valores das distâncias são positivos a limitação do algoritmo de ape
 
 ### Cadastrar um novo mapa
 
-Envie uma requisição POST para ``http://ip_servidor:porta_servidor /dr/mapas`` com um JSON no formato abaixo:
+Envie uma requisição POST para ``http://ip_servidor:porta_servidor/dr/mapas`` com um JSON no formato abaixo:
 
 ```{
 "mapa":"NOME_DO_MAPA",
@@ -52,9 +52,9 @@ Envie uma requisição POST para ``http://ip_servidor:porta_servidor /dr/mapas``
 
 ### Consultar um mapa
 
-Envie uma requisição GET para ``http://ip_servidor:porta_servidor /dr/mapas/ NOME_DO_MAPA``.
+Envie uma requisição GET para ``http://ip_servidor:porta_servidor/dr/mapas/NOME_DO_MAPA``.
 
 ### Verificar custo de uma rota
 
-Envie uma requisição GET para ``http://ip_servidor:porta_servidor /dr/rotas/ NOME_DO_MAPA?origem=X&destino=Y&autonomia=0.0&valor_litro=0.0``.
+Envie uma requisição GET para ``http://ip_servidor:porta_servidor/dr/rotas/NOME_DO_MAPA?origem=X&destino=Y&autonomia=0.0&valor_litro=0.0``.
 
