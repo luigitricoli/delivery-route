@@ -24,7 +24,7 @@ Como os valores das distâncias são positivos a limitação do algoritmo de ape
 
 3. Copie o arquivo ``dr_config.properties`` para o diretório TOMCAT_HOME/lib
 4. Altere a propriedade ``dp``, do arquivo ``dr_config.properties``, para o diretório e nome do banco de dados
-5. Execute ``mvn -Ptomvat-package package``
+5. Execute ``mvn -Ptomcat-packaging package``
 6. Faça deploy do artefato ``dr.war`` para o diretório TOMCAT_HOME/lib
 7. Execute o Tomcat.
 8. Acesse ip_tomcat:porta_tomcat/dr e visualize a mensagem: **DR funcionando...**
