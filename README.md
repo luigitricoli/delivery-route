@@ -18,7 +18,7 @@ Como os valores das distâncias são positivos a limitação do algoritmo de ape
 ## Instalação
 
 1. Clone o repositório master
-2. Faça checkout de tags/tag 1.0-beta
+2. Faça checkout de tags/1.0-beta
 
 ### Se Tomcat7
 
